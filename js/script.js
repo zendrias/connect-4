@@ -8,8 +8,9 @@ console.log(resultMessage)
 let isWinner, playerTurn, gameSlots;
 
 // Event Listeners
-cells.forEach(function (cell) {
-  cell.addEventListener('click', handleClick)
+cells.forEach(function (cell, i) {
+  if (cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 ||)
+    cell.addEventListener('click', handleClick)
 })
 // Constants
 const winningCombos = [
