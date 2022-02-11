@@ -1,6 +1,6 @@
 #1 // Create A Grid Of Individual Divs Using CSS Grid. Each Should Have A Unique Id.
  The Grid Will Be 7 x 6. I Will Not Fill The Entire Page With The Grid, So I Can Later
- Add DOM Messages For The User And A Reset Button 
+ Add DOM Messages For The User And A Reset Button. I Will Position Board Using Flexbox.
 
 #2 // Create My Cached Element Refrences for My Message (document.querySelctor), My 
 Reset Button (document.querySelctor), & My Divs (document.querySelctorAll).
@@ -19,16 +19,13 @@ Addition, Make Sure Gravity Is Being Accouted For For All Player Selections. **
 Loser, Tie-Game, Error Messages...)
 
 #7 // Create An Event Listener That Will Call A handleClick Function. This Function Will 
-Toggle The Turn & Call A Function To Check For A Game Winner, Or Tie.
+Toggle The Turn, Show Reset Button On First Click & Call A Function To Check For A Game Winner,
+ Or Tie.
 ** Make Sure To Prevent Any Clicks From Being Counted On Slots That Are Already Marked. In
 Addition, Make Sure Gravity Is Being Accouted For For All Player Selections. **
 
-#8 //
+#8 // Create a Function To Check For A Winner or Tie Game. Implement DRY Code!!
 
-#9 //
+#9 // Create An Event Listener For The Reset Button That Will Run The Init Function When Pressed.
 
-#10 //
-
-#11 //
-
-#12 //
+#10 // Style And Animate Game.
