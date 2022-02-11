@@ -42,11 +42,29 @@ const winningCombos = [
 
 
 // Functions
+// intit();
 
-function intit() {
-  //resetButton.setAttribute('hidden', 'true')
-  gameSlots = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-  playerTurn = 1;
-  isWinner = null;
-  render();
-}
+// function intit() {
+//   //resetButton.setAttribute('hidden', 'true')
+//   gameSlots = [1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+//   playerTurn = 1;
+//   isWinner = null;
+//   render();
+// }
+console.log(cells[10])
+console.log(gameSlots);
+// function render() {
+//   console.log(gameSlots)
+//   gameSlots.forEach(function (cell, i) {
+//     let cellColor;
+//     if (cell === 1) {
+//       cellColor = 'blue'
+//     } else if (cell === -1) {
+//       cellColor = 'red'
+//     } else if (cell === null) {
+//       cellColor = 'white';
+//     }
+//     console.log(i)
+//     cells[i].style.backgroundColor = cellColor;
+//   })
+// }
