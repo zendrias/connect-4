@@ -11,13 +11,17 @@ Reset Button (document.querySelctor), & My Divs (document.querySelctorAll).
 #4 // Create An Initialization Function To Reset Everything (gameSlots, winner, turn)
  & Hide Reset Button. 
 
-#5 // Create A Function To Mark A Spot Once A Player Clicks On It. This Function Must Also
- Make Sure To Prevent Any Clicks From Being Counted On Slots That Are Already Marked. It 
- Must Also Make Sure Gravity Is Being Accouted For For All Player Selections.
- 
-#6 //
+#5 // Create A Function To Mark A Spot Once A Player Clicks On It.
+** Make Sure To Prevent Any Clicks From Being Counted On Slots That Are Already Marked. In
+Addition, Make Sure Gravity Is Being Accouted For For All Player Selections. **
 
-#7 //
+#6 // Create A Function That Will Control The DOM Message To The User (Whos Turn, Winner, 
+Loser, Tie-Game, Error Messages...)
+
+#7 // Create An Event Listener That Will Call A handleClick Function. This Function Will 
+Toggle The Turn & Call A Function To Check For A Game Winner, Or Tie.
+** Make Sure To Prevent Any Clicks From Being Counted On Slots That Are Already Marked. In
+Addition, Make Sure Gravity Is Being Accouted For For All Player Selections. **
 
 #8 //
 
