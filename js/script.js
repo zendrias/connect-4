@@ -1,9 +1,9 @@
 // Cached Element Refrences
 const cells = document.querySelectorAll('.container > div')
 
-const resultMessage = document.querySelector('my-message')
+const resultMessage = document.querySelector('#my-message')
 
-
+console.log(resultMessage)
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
 
@@ -55,12 +55,8 @@ function intit() {
   isWinner = null;
   render();
 }
-console.log(cells)
-console.log(cells[10])
-console.log(gameSlots);
 
 function render() {
-  console.log(gameSlots)
   gameSlots.forEach(function (cell, i) {
     let cellColor;
     if (cell === 1) {
@@ -70,21 +66,17 @@ function render() {
     } else if (cell === null) {
       cellColor = 'white';
     }
-    console.log(i)
     cells[i].style.backgroundColor = cellColor;
   })
 }
 
 function handleClick(e) {
   // resetButton.removeAttribute('hidden')
-  console.log(this)
   let index = this.id;
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
   gameSlots[index] = playerTurn;
   playerTurn = playerTurn * -1;
-  console.log(playerTurn)
-  console.log(gameSlots)
   getWinner();
 }
 
@@ -96,7 +88,7 @@ function getWinner() {
       changeMessage();
     }
   })
-  let tieGame = boardSquares.some(numb => numb === null)
+  let tieGame = gameSlots.some(numb => numb === null)
   if (tieGame === false && isWinner !== 1 && isWinner !== -1) {
     isWinner = 'T'
     changeMessage();
