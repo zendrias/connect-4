@@ -1,6 +1,7 @@
 // Cached Element Refrences
 const cells = document.querySelectorAll('.container > div')
 
+const resultMessage = document.querySelector('my-message')
 
 
 // Declare Game Variables
@@ -84,6 +85,33 @@ function handleClick(e) {
   playerTurn = playerTurn * -1;
   console.log(playerTurn)
   console.log(gameSlots)
-  render()
-  // getWinner();
+  getWinner();
+}
+
+function getWinner() {
+  render();
+  winningCombos.forEach(combo => {
+    if (Math.abs(gameSlots[combo[0]] + gameSlots[combo[1]] + gameSlots[combo[2]] + gameSlots[combo[3]]) === 4) {
+      isWinner = gameSlots[combo[0]];
+      changeMessage();
+    }
+  })
+  let tieGame = boardSquares.some(numb => numb === null)
+  if (tieGame === false && isWinner !== 1 && isWinner !== -1) {
+    isWinner = 'T'
+    changeMessage();
+  }
+}
+
+function changeMessage() {
+  if (isWinner === null) {
+    if (playerTurn === 1) resultMessage.textContent = "Player One's Move"
+    if (playerTurn === -1) resultMessage.textContent = "Player Two's Move"
+  } else if (isWinner === 'T') {
+    resultMessage.textContent = 'Tie Game! Select The "Reset Game" Button To Play Again'
+  } else if (isWinner === 1) {
+    resultMessage.textContent = 'Player One Has Won The Game'
+  } else if (isWinner === -1) {
+    resultMessage.textContent = 'Player Two Has Won The Game'
+  }
 }
