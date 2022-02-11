@@ -1,5 +1,5 @@
 // Cached Element Refrences
-const cells = document.querySelectorAll('.container')
+const cells = document.querySelectorAll('.container > div')
 
 
 
@@ -8,11 +8,8 @@ let isWinner, playerTurn, gameSlots;
 
 // Event Listeners
 cells.forEach(function (cell) {
-  cell.addEventListener('click', function (e) {
-    console.log(e.target.id)
-  })
+  cell.addEventListener('click', handleClick)
 })
-
 // Constants
 const winningCombos = [
   [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10],
@@ -42,29 +39,43 @@ const winningCombos = [
 
 
 // Functions
-// intit();
+intit();
 
-// function intit() {
-//   //resetButton.setAttribute('hidden', 'true')
-//   gameSlots = [1, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-//   playerTurn = 1;
-//   isWinner = null;
-//   render();
-// }
+function intit() {
+  //resetButton.setAttribute('hidden', 'true')
+  gameSlots =
+    [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+  playerTurn = 1;
+  isWinner = null;
+  render();
+}
+console.log(cells)
 console.log(cells[10])
 console.log(gameSlots);
-// function render() {
-//   console.log(gameSlots)
-//   gameSlots.forEach(function (cell, i) {
-//     let cellColor;
-//     if (cell === 1) {
-//       cellColor = 'blue'
-//     } else if (cell === -1) {
-//       cellColor = 'red'
-//     } else if (cell === null) {
-//       cellColor = 'white';
-//     }
-//     console.log(i)
-//     cells[i].style.backgroundColor = cellColor;
-//   })
-// }
+
+function render() {
+  console.log(gameSlots)
+  gameSlots.forEach(function (cell, i) {
+    let cellColor;
+    if (cell === 1) {
+      cellColor = 'blue'
+    } else if (cell === -1) {
+      cellColor = 'red'
+    } else if (cell === null) {
+      cellColor = 'white';
+    }
+    console.log(i)
+    cells[i].style.backgroundColor = cellColor;
+  })
+}
+
+function handleClick(e) {
+  // resetButton.removeAttribute('hidden')
+  let index = this.id;
+  if (gameSlots[index] !== null) return;
+  if (isWinner !== null) return;
+  gameSlots[index] = playerTurn;
+  playerTurn = playerTurn * -1;
+  console.log(playerTurn)
+  // getWinner();
+}
