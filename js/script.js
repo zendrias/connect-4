@@ -44,7 +44,12 @@ intit();
 function intit() {
   //resetButton.setAttribute('hidden', 'true')
   gameSlots =
-    [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+    [null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null,
+      null, null, null, null, null, null, null]
   playerTurn = 1;
   isWinner = null;
   render();
@@ -71,11 +76,14 @@ function render() {
 
 function handleClick(e) {
   // resetButton.removeAttribute('hidden')
+  console.log(this)
   let index = this.id;
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
   gameSlots[index] = playerTurn;
   playerTurn = playerTurn * -1;
   console.log(playerTurn)
+  console.log(gameSlots)
+  render()
   // getWinner();
 }
