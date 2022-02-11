@@ -9,8 +9,7 @@ let isWinner, playerTurn, gameSlots;
 
 // Event Listeners
 cells.forEach(function (cell, i) {
-  if (cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 || cell[i] === 1 ||)
-    cell.addEventListener('click', handleClick)
+  cell.addEventListener('click', handleClick)
 })
 // Constants
 const winningCombos = [
@@ -74,8 +73,15 @@ function render() {
 function handleClick(e) {
   // resetButton.removeAttribute('hidden')
   let index = this.id;
+  console.log(typeof index)
+  if (index === 35 || index === 36 || index === 37 || index === 38 || index === 39 || index === 40 || index === 41) {
+    console.log('hola')
+    this.classList.add('X')
+  }
+  console.log(this.classname)
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
+  //if (gameSlots[index] - 7 === null) return;
   gameSlots[index] = playerTurn;
   playerTurn = playerTurn * -1;
   getWinner();
