@@ -72,19 +72,14 @@ function render() {
 
 function handleClick(e) {
   // resetButton.removeAttribute('hidden')
-  let index = this.id;
-  let _index = parseInt(index);
-  if (_index === 35 || _index === 36 || _index === 37 || _index === 38 || _index === 39 || _index === 40 || _index === 41) {
-    e.target.className = 'X'
-  }
-  // console.log(gameSlots[_index])
-  // if (gameSlots[_index - 7].className !== 'X') return
+  let index = parseInt(this.id);
+  e.target.className = 'X'
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
-  //if (gameSlots[index] - 7 === null) return;
   gameSlots[index] = playerTurn;
   console.log(gameSlots[index])
-  if (gameSlots[_index + 7].className !== 'X') return
+  let test = index + 7;
+  // if (cells[test].className !== 'X' && cells[index] < 35) return;
   playerTurn = playerTurn * -1;
   getWinner();
 }
