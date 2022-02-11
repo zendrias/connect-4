@@ -74,15 +74,17 @@ function handleClick(e) {
   // resetButton.removeAttribute('hidden')
   let index = this.id;
   let _index = parseInt(index);
-  if (index === 35 || index === 36 || index === 37 || index === 38 || index === 39 || index === 40 || index === 41) {
-    console.log('hola')
-    this.classList.add('X')
+  if (_index === 35 || _index === 36 || _index === 37 || _index === 38 || _index === 39 || _index === 40 || _index === 41) {
+    e.target.className = 'X'
   }
-  console.log(this.classname)
+  // console.log(gameSlots[_index])
+  // if (gameSlots[_index - 7].className !== 'X') return
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
   //if (gameSlots[index] - 7 === null) return;
   gameSlots[index] = playerTurn;
+  console.log(gameSlots[index])
+  if (gameSlots[_index + 7].className !== 'X') return
   playerTurn = playerTurn * -1;
   getWinner();
 }
