@@ -73,7 +73,7 @@ function render() {
 function handleClick(e) {
   // resetButton.removeAttribute('hidden')
   let index = this.id;
-  console.log(typeof index)
+  let _index = parseInt(index);
   if (index === 35 || index === 36 || index === 37 || index === 38 || index === 39 || index === 40 || index === 41) {
     console.log('hola')
     this.classList.add('X')
