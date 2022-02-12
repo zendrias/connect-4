@@ -73,14 +73,17 @@ function render() {
 function handleClick(e) {
   // resetButton.removeAttribute('hidden')
   let index = parseInt(this.id);
-  e.target.className = 'X'
+  let slotUnder = index + 7;
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
+  index < 35 && cells[slotUnder].className === '' ? return; ''
+  e.target.className = 'X'
   gameSlots[index] = playerTurn;
-  console.log(gameSlots[index])
-  let test = index + 7;
-  // if (cells[test].className !== 'X' && cells[index] < 35) return;
+  if (index > 34) {
+    cells[index].className = 'X'
+  }
   playerTurn = playerTurn * -1;
+  changeMessage()
   getWinner();
 }
 
