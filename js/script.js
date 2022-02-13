@@ -5,6 +5,11 @@ const resultMessage = document.querySelector('#my-message')
 
 const resetButton = document.querySelector('#reset-button')
 
+const modeButton = document.querySelector('#light-dark-mode')
+
+const body = document.querySelector('body')
+
+const container = document.querySelector('.container')
 console.log(resultMessage)
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
@@ -15,6 +20,8 @@ cells.forEach(function (cell, i) {
 })
 
 resetButton.addEventListener('click', intit)
+
+modeButton.addEventListener('click', colorMode);
 // Constants
 const winningCombos = [
   [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10],
@@ -124,5 +131,16 @@ function changeMessage() {
   }
 }
 
+function colorMode() {
+  if (body.style.backgroundColor !== 'white') {
+    body.style.backgroundColor = 'white'
+  } else if (body.style.backgroundColor === 'white') {
+    body.style.backgroundColor = '#303030'
+  }
+  if (container.style.background !== 'blue') {
+    container.style.background = 'blue'
+  } else if (container.style.background === 'blue') {
+    containerlinear - gradient(blue, rgb(10, 255, 255), rgb(30, 255, 0));
+  }
 
-
+} 
