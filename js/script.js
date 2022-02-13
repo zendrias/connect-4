@@ -68,6 +68,7 @@ function intit() {
   cells.forEach(function (cell) {
     cell.className = ''
   });
+  cells.forEach(function (cell) { cell.innerHTML = '' })
   render();
 }
 
@@ -109,10 +110,14 @@ function getWinner() {
     if (Math.abs(gameSlots[combo[0]] + gameSlots[combo[1]] + gameSlots[combo[2]] + gameSlots[combo[3]]) === 4) {
       isWinner = gameSlots[combo[0]];
       changeMessage();
-      cells[combo[0]].style.backgroundColor = "#39FF14"
-      cells[combo[1]].style.backgroundColor = "#39FF14"
-      cells[combo[2]].style.backgroundColor = "#39FF14"
-      cells[combo[3]].style.backgroundColor = "#39FF14"
+      cells[combo[0]].style.backgroundColor = "#FF10F0"
+      cells[combo[1]].style.backgroundColor = "#FF10F0"
+      cells[combo[2]].style.backgroundColor = "#FF10F0"
+      cells[combo[3]].style.backgroundColor = "#FF10F0"
+      cells[combo[0]].innerHTML = '<i class="fa-solid fa-star"></i>'
+      cells[combo[1]].innerHTML = '<i class="fa-solid fa-star"></i>'
+      cells[combo[2]].innerHTML = '<i class="fa-solid fa-star"></i>'
+      cells[combo[3]].innerHTML = '<i class="fa-solid fa-star"></i>'
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
