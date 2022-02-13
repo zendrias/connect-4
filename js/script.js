@@ -109,6 +109,10 @@ function getWinner() {
     if (Math.abs(gameSlots[combo[0]] + gameSlots[combo[1]] + gameSlots[combo[2]] + gameSlots[combo[3]]) === 4) {
       isWinner = gameSlots[combo[0]];
       changeMessage();
+      cells[combo[0]].style.backgroundColor = "#39FF14"
+      cells[combo[1]].style.backgroundColor = "#39FF14"
+      cells[combo[2]].style.backgroundColor = "#39FF14"
+      cells[combo[3]].style.backgroundColor = "#39FF14"
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
