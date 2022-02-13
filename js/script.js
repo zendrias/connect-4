@@ -3,6 +3,8 @@ const cells = document.querySelectorAll('.container > div')
 
 const resultMessage = document.querySelector('#my-message')
 
+const resetButton = document.querySelector('#reset-button')
+
 console.log(resultMessage)
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
@@ -60,13 +62,13 @@ function render() {
   gameSlots.forEach(function (cell, i) {
     let cellColor;
     if (cell === 1) {
-      cellColor = 'blue'
+      cellColor = 'linear-gradient(#ffcff1, #BF40BF)'
     } else if (cell === -1) {
-      cellColor = 'red'
+      cellColor = 'linear-gradient(#000000, #0FFF50)'
     } else if (cell === null) {
       cellColor = 'white';
     }
-    cells[i].style.backgroundColor = cellColor;
+    cells[i].style.background = cellColor;
   })
 }
 
@@ -76,12 +78,13 @@ function handleClick(e) {
   let slotUnder = index + 7;
   if (gameSlots[index] !== null) return;
   if (isWinner !== null) return;
-  index < 35 && cells[slotUnder].className === '' ? return; ''
+  if (index < 35 && cells[slotUnder].className === '') {
+    alert('Invalid Move! Please Try Agian!')
+    return;
+  }
   e.target.className = 'X'
   gameSlots[index] = playerTurn;
-  if (index > 34) {
-    cells[index].className = 'X'
-  }
+  index > 34 ? cells[index].className = 'X' : ''
   playerTurn = playerTurn * -1;
   changeMessage()
   getWinner();
@@ -109,8 +112,11 @@ function changeMessage() {
   } else if (isWinner === 'T') {
     resultMessage.textContent = 'Tie Game! Select The "Reset Game" Button To Play Again'
   } else if (isWinner === 1) {
-    resultMessage.textContent = 'Player One Has Won The Game'
+    resultMessage.textContent = 'Winner! Winner! Player One!'
   } else if (isWinner === -1) {
-    resultMessage.textContent = 'Player Two Has Won The Game'
+    resultMessage.textContent = 'Winner! Winner! Player Two!'
   }
 }
+
+
+

@@ -1,13 +1,15 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: #303030;
 /* Use a system font, if none are available use an available sans-sarif   font */
 margin: 0;
-height: 100vh;
+height: 103vh;
 display: grid;
 flex-direction: column;
 text-align:center;
 justify-content: center;
 align-items: center;
+font-family: 'Archivo', sans-serif;
+font-size: 25px;
 }
 /* .flex-container{
   display: flex;
@@ -16,35 +18,57 @@ align-items: center;
 } */
 section.container {
 display: grid;
-grid-template-rows: repeat(6, 14vmin);
-grid-template-columns: repeat(7, 14vmin);
+grid-template-rows: repeat(6, 13vmin);
+grid-template-columns: repeat(7, 13vmin);
 grid-gap: 0vmin;
 justify-content: center;
+background-color: rgb(45, 45, 255);
+padding: 10px 15px;
+border-radius: 20px;
+margin-bottom: 40px;
 }
 
 section > div {
-border: 3px solid black;
+border: 2px solid black;
 font-size: 8vmin;
 text-align: center;
 vertical-align: middle;
+border-radius: 50%;
+margin: 2px;
+cursor: pointer;
 }
 
 #reset-button{
-width: 20%;
-height: 7%;
+width: 15rem;
+height: 5rem;
 border-radius: 10px;
 border: none;
-font-size: 18px;
+font-size: 30px;
 font-weight: bold;
-margin-left:43%;
-margin-top: 20px;
 background-color: red ;
 color: White;
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+border: 2px white solid;
+font-family: 'Space Mono', monospace;
 cursor: pointer;
 }
 
 #reset-button:hover{
 background-color:rgb(255, 255, 255);
 color: red;
+border: 2px red solid;
+}
+
+
+
+.light-message{
+  color:black;
+}
+
+#my-message{
+  color:white;
+  margin-bottom: -1rem;
+  margin-top: -1rem;
+}
+.button-container{
+  margin-top: -3rem;
 }
