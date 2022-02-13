@@ -34,7 +34,7 @@ margin: 2px;
 cursor: pointer;
 }
 
-#reset-button{
+button{
 width: 15rem;
 height: 5rem;
 border-radius: 10px;
@@ -48,7 +48,7 @@ font-family: 'Space Mono', monospace;
 cursor: pointer;
 }
 
-#reset-button:hover{
+button:hover{
 background-color:rgb(255, 255, 255);
 color: red;
 border: 2px red solid;
@@ -65,3 +65,4 @@ border: 2px red solid;
 header{
   text-align: center;
 }
+

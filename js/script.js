@@ -134,13 +134,23 @@ function changeMessage() {
 function colorMode() {
   if (body.style.backgroundColor !== 'white') {
     body.style.backgroundColor = 'white'
-  } else if (body.style.backgroundColor === 'white') {
+  } else {
     body.style.backgroundColor = '#303030'
   }
-  if (container.style.background !== 'blue') {
+  if (container.id !== 'blue') {
+    container.id = 'blue'
     container.style.background = 'blue'
-  } else if (container.style.background === 'blue') {
-    containerlinear - gradient(blue, rgb(10, 255, 255), rgb(30, 255, 0));
+    modeButton.textContent = 'Dark Mode'
+  } else {
+    container.style.background = 'linear-gradient(blue, rgb(10, 255, 255), rgb(30, 255, 0))';
+    container.id = ''
+    modeButton.textContent = 'Light Mode'
   }
-
-} 
+  if (resultMessage.className === 'Light') {
+    resultMessage.style.color = 'black'
+    resultMessage.className = 'Dark'
+  } else {
+    resultMessage.style.color = 'white'
+    resultMessage.className = 'Light'
+  }
+}
