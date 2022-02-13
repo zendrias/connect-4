@@ -13,6 +13,8 @@ let isWinner, playerTurn, gameSlots;
 cells.forEach(function (cell, i) {
   cell.addEventListener('click', handleClick)
 })
+
+resetButton.addEventListener('click', intit)
 // Constants
 const winningCombos = [
   [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10],
@@ -45,7 +47,7 @@ const winningCombos = [
 intit();
 
 function intit() {
-  //resetButton.setAttribute('hidden', 'true')
+  resetButton.setAttribute('hidden', 'true')
   gameSlots =
     [null, null, null, null, null, null, null,
       null, null, null, null, null, null, null,
@@ -55,6 +57,9 @@ function intit() {
       null, null, null, null, null, null, null]
   playerTurn = 1;
   isWinner = null;
+  cells.forEach(function (cell) {
+    cell.className = ''
+  });
   render();
 }
 
@@ -73,7 +78,6 @@ function render() {
 }
 
 function handleClick(e) {
-  // resetButton.removeAttribute('hidden')
   let index = parseInt(this.id);
   let slotUnder = index + 7;
   if (gameSlots[index] !== null) return;
@@ -86,6 +90,7 @@ function handleClick(e) {
   gameSlots[index] = playerTurn;
   index > 34 ? cells[index].className = 'X' : ''
   playerTurn = playerTurn * -1;
+  resetButton.removeAttribute('hidden')
   changeMessage()
   getWinner();
 }
