@@ -57,6 +57,7 @@ function intit() {
       null, null, null, null, null, null, null]
   playerTurn = 1;
   isWinner = null;
+  resultMessage.textContent = "Connect 4"
   cells.forEach(function (cell) {
     cell.className = ''
   });
@@ -67,9 +68,9 @@ function render() {
   gameSlots.forEach(function (cell, i) {
     let cellColor;
     if (cell === 1) {
-      cellColor = 'linear-gradient(#ffcff1, #BF40BF)'
+      cellColor = 'red'
     } else if (cell === -1) {
-      cellColor = 'linear-gradient(#000000, #0FFF50)'
+      cellColor = 'yellow'
     } else if (cell === null) {
       cellColor = 'white';
     }
