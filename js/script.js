@@ -10,7 +10,9 @@ const modeButton = document.querySelector('#light-dark-mode')
 const body = document.querySelector('body')
 
 const container = document.querySelector('.container')
-console.log(resultMessage)
+
+const winningAudio = document.querySelector('#winnerAudio')
+
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
 
@@ -49,6 +51,10 @@ const winningCombos = [
   [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
 ];
 
+
+var confettiSettings = { target: 'my-canvas' };
+
+var confetti = new ConfettiGenerator(confettiSettings);
 
 // Functions
 intit();
@@ -118,6 +124,8 @@ function getWinner() {
       cells[combo[1]].innerHTML = '<i class="fa-solid fa-star"></i>'
       cells[combo[2]].innerHTML = '<i class="fa-solid fa-star"></i>'
       cells[combo[3]].innerHTML = '<i class="fa-solid fa-star"></i>'
+      winningAudio.play();
+      confetti.render();
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
