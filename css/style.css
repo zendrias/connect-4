@@ -68,6 +68,7 @@ border: 2px rgb(0, 183, 255) solid;
 
 header{
   text-align: center;
+  color:white
 }
 
 i{
@@ -83,3 +84,4 @@ i{
   left:0;
   z-index: -1;
 }
+

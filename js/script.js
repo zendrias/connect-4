@@ -177,11 +177,11 @@ function colorMode() {
     container.id = ''
     modeButton.textContent = 'Light Mode'
   }
-  if (resultMessage.className === 'Light') {
-    resultMessage.style.color = 'white'
+  if (resultMessage.classList.contains('Light')) {
+    resultMessage.style.color = 'black'
     resultMessage.className = 'Dark'
   } else {
-    resultMessage.style.color = 'black'
+    resultMessage.style.color = 'white'
     resultMessage.className = 'Light'
   }
 }
