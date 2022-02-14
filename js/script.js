@@ -13,6 +13,8 @@ const container = document.querySelector('.container')
 
 const winningAudio = document.querySelector('#winnerAudio')
 
+const canvas = document.querySelector('canvas')
+
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
 
@@ -61,6 +63,7 @@ intit();
 
 function intit() {
   resetButton.setAttribute('hidden', 'true')
+  canvas.setAttribute('hidden', 'true')
   gameSlots =
     [null, null, null, null, null, null, null,
       null, null, null, null, null, null, null,
@@ -125,7 +128,7 @@ function getWinner() {
       cells[combo[2]].innerHTML = '<i class="fa-solid fa-star"></i>'
       cells[combo[3]].innerHTML = '<i class="fa-solid fa-star"></i>'
       winningAudio.play();
-      confetti.render();
+      canvas.removeAttribute('hidden')
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
@@ -171,3 +174,5 @@ function colorMode() {
     resultMessage.className = 'Light'
   }
 }
+
+confetti.render();
