@@ -173,10 +173,10 @@ function colorMode() {
     modeButton.textContent = 'Light Mode'
   }
   if (resultMessage.className === 'Light') {
-    resultMessage.style.color = 'black'
+    resultMessage.style.color = 'white'
     resultMessage.className = 'Dark'
   } else {
-    resultMessage.style.color = 'white'
+    resultMessage.style.color = 'black'
     resultMessage.className = 'Light'
   }
 }
