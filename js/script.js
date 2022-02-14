@@ -129,6 +129,7 @@ function getWinner() {
       cells[combo[3]].innerHTML = '<i class="fa-solid fa-star"></i>'
       winningAudio.play();
       canvas.removeAttribute('hidden')
+      resultMessage.className.remo
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
