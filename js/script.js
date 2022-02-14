@@ -60,10 +60,14 @@ var confetti = new ConfettiGenerator(confettiSettings);
 
 // Functions
 intit();
-
+confetti.render();
 function intit() {
   resetButton.setAttribute('hidden', 'true')
   canvas.setAttribute('hidden', 'true')
+  if (resultMessage.classList.contains('animate__rubberBand')) {
+    resultMessage.classList.remove('animate__rubberBand')
+    resultMessage.classList.add('animate__bounce')
+  }
   gameSlots =
     [null, null, null, null, null, null, null,
       null, null, null, null, null, null, null,
@@ -129,7 +133,8 @@ function getWinner() {
       cells[combo[3]].innerHTML = '<i class="fa-solid fa-star"></i>'
       winningAudio.play();
       canvas.removeAttribute('hidden')
-      resultMessage.className.remo
+      resultMessage.classList.remove('animate__bounce')
+      resultMessage.classList.add('animate__rubberBand')
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
@@ -175,5 +180,3 @@ function colorMode() {
     resultMessage.className = 'Light'
   }
 }
-
-confetti.render();
