@@ -65,8 +65,10 @@ function intit() {
   resetButton.setAttribute('hidden', 'true')
   canvas.setAttribute('hidden', 'true')
   if (resultMessage.classList.contains('animate__rubberBand')) {
-    resultMessage.classList.remove('animate__rubberBand')
-    resultMessage.classList.add('animate__bounce')
+    resultMessage.classList.remove('animate__rubberBand');
+    resultMessage.classList.add('animate__bounce');
+    container.classList.remove('animate__animated');
+    container.classList.remove('animate__rubberBand');
   }
   gameSlots =
     [null, null, null, null, null, null, null,
@@ -134,7 +136,10 @@ function getWinner() {
       winningAudio.play();
       canvas.removeAttribute('hidden')
       resultMessage.classList.remove('animate__bounce')
+      resultMessage.classList.add('animate__animated')
       resultMessage.classList.add('animate__rubberBand')
+      container.classList.add('animate__animated')
+      container.classList.add('animate__rubberBand')
     }
   })
   let tieGame = gameSlots.some(numb => numb === null)
