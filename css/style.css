@@ -61,9 +61,11 @@ border: 2px rgb(0, 183, 255) solid;
 
 #my-message{
   margin-top: 1rem;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Uncracked Free Trial','Space Mono', monospace;
   grid-area: message;
   margin-bottom: -.5rem;
+  letter-spacing: 1rem;
+  font-size: 70px;
 }
 
 header{
@@ -86,25 +88,13 @@ i{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 body.light{
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  transition: .75s;
+  transition: 1s;
 }
 
 
@@ -114,7 +104,7 @@ body.dark{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  transition: .75s;
+  transition: 1s;
 }
 
 .outter-toggle.light{

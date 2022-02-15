@@ -151,8 +151,8 @@ function getWinner() {
 
 function changeMessage() {
   if (isWinner === null) {
-    if (playerTurn === 1) resultMessage.textContent = "Player One's Move"
-    if (playerTurn === -1) resultMessage.textContent = "Player Two's Move"
+    if (playerTurn === 1) resultMessage.textContent = "Player Ones Move"
+    if (playerTurn === -1) resultMessage.textContent = "Player Twos Move"
   } else if (isWinner === 'T') {
     resultMessage.textContent = 'Tie Game! Select The "Reset Game" Button To Play Again'
   } else if (isWinner === 1) {
@@ -177,6 +177,7 @@ function colorMode() {
     resultMessage.style.color = 'black'
     resultMessage.className = 'Light'
   }
+
   if (body.classList.contains('light')) {
     body.classList.remove('light')
     body.classList.add('dark')
