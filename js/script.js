@@ -99,7 +99,7 @@ function render() {
     } else if (cell === -1) {
       cellColor = 'yellow'
     } else if (cell === null) {
-      cellColor = 'white';
+      cellColor = 'rgba(0, 0, 255,0)';
     }
     cells[i].style.background = cellColor;
   })
@@ -167,13 +167,13 @@ function changeMessage() {
 }
 
 function colorMode() {
-  if (container.id !== 'light') {
-    container.id = 'light'
-    container.style.background = 'blue'
-  } else {
-    container.style.background = 'linear-gradient(purple, pink)';
-    container.id = ''
-  }
+  // if (container.id !== 'light') {
+  //   container.id = 'light'
+  //   container.style.background = 'blue'
+  // } else {
+  //   container.style.background = 'linear-gradient(purple, pink)';
+  //   container.id = ''
+  // }
   if (resultMessage.classList.contains('Light')) {
     resultMessage.style.color = 'white'
     resultMessage.className = 'Dark'
@@ -201,5 +201,12 @@ function colorMode() {
     innerToggle.classList.add('light')
     resetButton.classList.remove('dark')
   }
+  cells.forEach(function (cell, i) {
+    if (body.classList.contains('light')) {
+      cell.style.border = "solid black 2px"
+    } else {
+      cell.style.border = "solid white 2px"
+    }
+  })
 }
 

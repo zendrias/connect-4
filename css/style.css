@@ -19,7 +19,7 @@ grid-template-rows: repeat(6, 11vmin);
 grid-template-columns: repeat(7, 11vmin);
 grid-gap: 0vmin;
 justify-content: center;
-background: blue;
+background: rgba(0, 0, 255,0);
 padding: 10px 15px;
 border-radius: 20px;
 margin-bottom: 40px;
