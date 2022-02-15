@@ -174,13 +174,13 @@ function colorMode() {
   //   container.style.background = 'linear-gradient(purple, pink)';
   //   container.id = ''
   // }
-  if (resultMessage.classList.contains('Light')) {
-    resultMessage.style.color = 'white'
-    resultMessage.className = 'Dark'
-  } else {
-    resultMessage.style.color = 'black'
-    resultMessage.className = 'Light'
-  }
+  // if (resultMessage.classList.contains('Light')) {
+  //   resultMessage.style.color = 'white'
+  //   resultMessage.className = 'Dark'
+  // } else {
+  //   resultMessage.style.color = 'black'
+  //   resultMessage.className = 'Light'
+  // }
 
   if (body.classList.contains('light')) {
     body.classList.remove('light')
@@ -191,6 +191,8 @@ function colorMode() {
     innerToggle.classList.add('dark')
     resetButton.classList.remove('light')
     resetButton.classList.add('dark')
+    resultMessage.classList.remove('light')
+    resultMessage.classList.add('dark')
   } else {
     body.classList.add('light')
     body.classList.remove('dark')
@@ -200,6 +202,9 @@ function colorMode() {
     innerToggle.classList.remove('dark')
     innerToggle.classList.add('light')
     resetButton.classList.remove('dark')
+    resetButton.classList.add('light')
+    resultMessage.classList.remove('dark')
+    resultMessage.classList.add('light')
   }
   cells.forEach(function (cell, i) {
     if (body.classList.contains('light')) {
