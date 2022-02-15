@@ -21,7 +21,7 @@ const innerToggle = document.querySelector('.inner-toggle')
 
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
-
+let darkMode = false;
 // Event Listeners
 cells.forEach(function (cell, i) {
   cell.addEventListener('click', handleClick)
@@ -62,6 +62,8 @@ var confettiSettings = { target: 'my-canvas' };
 
 var confetti = new ConfettiGenerator(confettiSettings);
 
+let four = [0, 1, 2, 3];
+
 // Functions
 intit();
 confetti.render();
@@ -84,10 +86,10 @@ function intit() {
   playerTurn = 1;
   isWinner = null;
   resultMessage.textContent = "Connect 4"
-  cells.forEach(function (cell) {
+  cells.forEach(function (cell, i) {
     cell.className = ''
+    darkMode === false ? cell.style.border = '' : cell.style.border = '2px white solid'
   });
-  cells.forEach(function (cell) { cell.innerHTML = '' })
   render();
 }
 
@@ -129,14 +131,14 @@ function getWinner() {
     if (Math.abs(gameSlots[combo[0]] + gameSlots[combo[1]] + gameSlots[combo[2]] + gameSlots[combo[3]]) === 4) {
       isWinner = gameSlots[combo[0]];
       changeMessage();
-      cells[combo[0]].style.backgroundColor = "#FF10F0"
-      cells[combo[1]].style.backgroundColor = "#FF10F0"
-      cells[combo[2]].style.backgroundColor = "#FF10F0"
-      cells[combo[3]].style.backgroundColor = "#FF10F0"
-      cells[combo[0]].innerHTML = '<i class="fa-solid fa-star"></i>'
-      cells[combo[1]].innerHTML = '<i class="fa-solid fa-star"></i>'
-      cells[combo[2]].innerHTML = '<i class="fa-solid fa-star"></i>'
-      cells[combo[3]].innerHTML = '<i class="fa-solid fa-star"></i>'
+      cells[combo[0]].style.backgroundColor = "rgba(149, 225, 255, .4)"
+      cells[combo[1]].style.backgroundColor = "rgba(149, 225, 255, .4)"
+      cells[combo[2]].style.backgroundColor = "rgba(149, 225, 255, .4)"
+      cells[combo[3]].style.backgroundColor = "rgba(149, 225, 255, .4)"
+      cells[combo[0]].style.border = "solid 2px rgb(0, 183, 255)"
+      cells[combo[1]].style.border = "solid 2px rgb(0, 183, 255)"
+      cells[combo[2]].style.border = "solid 2px rgb(0, 183, 255)"
+      cells[combo[3]].style.border = "solid 2px rgb(0, 183, 255)"
       winningAudio.play();
       canvas.removeAttribute('hidden')
       resultMessage.classList.remove('animate__bounce')
@@ -167,21 +169,6 @@ function changeMessage() {
 }
 
 function colorMode() {
-  // if (container.id !== 'light') {
-  //   container.id = 'light'
-  //   container.style.background = 'blue'
-  // } else {
-  //   container.style.background = 'linear-gradient(purple, pink)';
-  //   container.id = ''
-  // }
-  // if (resultMessage.classList.contains('Light')) {
-  //   resultMessage.style.color = 'white'
-  //   resultMessage.className = 'Dark'
-  // } else {
-  //   resultMessage.style.color = 'black'
-  //   resultMessage.className = 'Light'
-  // }
-
   if (body.classList.contains('light')) {
     body.classList.remove('light')
     body.classList.add('dark')
@@ -193,6 +180,7 @@ function colorMode() {
     resetButton.classList.add('dark')
     resultMessage.classList.remove('light')
     resultMessage.classList.add('dark')
+    darkMode = true
   } else {
     body.classList.add('light')
     body.classList.remove('dark')
@@ -205,6 +193,7 @@ function colorMode() {
     resetButton.classList.add('light')
     resultMessage.classList.remove('dark')
     resultMessage.classList.add('light')
+    darkMode = false
   }
   cells.forEach(function (cell, i) {
     if (body.classList.contains('light')) {
