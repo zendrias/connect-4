@@ -1,14 +1,16 @@
-body {
+/* body {
   background-color: #303030;
 margin: 0;
 height: 100vh;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 text-align:center;
 justify-content: space-between;
 align-items: center;
 font-size: 25px;
-}
+line-height: 220%;
+transform-origin: 2s;
+} */
 
 
 section.container {
@@ -38,17 +40,14 @@ text-align: center;
 
 
 button{
-width: 15rem;
-height: 5rem;
-border-radius: 10px;
-border: none;
-font-size: 30px;
-font-weight: bold;
-background-color: red ;
-color: White;
-border: 2px white solid;
-font-family: 'Space Mono', monospace;
-cursor: pointer;
+  width: 130px;
+  height: 70px;
+  border-radius: 50px;
+  border:black 2px solid;
+  margin-bottom: 1rem;
+  margin-left: 10px;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
 }
 
 button:hover{
@@ -63,7 +62,7 @@ border: 2px rgb(0, 183, 255) solid;
   margin-top: 1rem;
   font-family: 'Uncracked Free Trial','Space Mono', monospace;
   grid-area: message;
-  margin-bottom: -.5rem;
+  margin-bottom: 5px;
   letter-spacing: 1rem;
   font-size: 70px;
 }
@@ -95,6 +94,7 @@ body.light{
   align-items: center;
   min-height: 100vh;
   transition: 1s;
+  line-height: 310%;
 }
 
 
@@ -105,11 +105,12 @@ body.dark{
   align-items: center;
   min-height: 100vh;
   transition: 1s;
+  line-height: 310%;
 }
 
 .outter-toggle.light{
-  width: 160px;
-  height: 75px;
+  width: 120px;
+  height: 60px;
   background-image:url('/gifs/light\ giff\ 2.gif');
   border-radius: 50px;
   border:black 2px solid;
@@ -119,12 +120,13 @@ body.dark{
   padding-left: 5px;
   padding-bottom: 5px;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 
 .outter-toggle.dark{
-  width: 160px;
-  height: 75px;
+  width: 120px;
+  height: 60px;
   background-image: url('/gifs/star\ gazing\ 2.gif');
   border-radius: 50px;
   border:rgb(255, 255, 255) 2px solid;
@@ -134,12 +136,13 @@ body.dark{
   padding-right: 5px;
   padding-bottom: 5px;
   cursor: pointer;
+  margin-left: 1rem;
 }
 
 
 .inner-toggle.light{
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   background-color: rgb(255, 255, 255);
   border: black solid 2px;
   border-radius: 50%;
@@ -149,11 +152,30 @@ body.dark{
 
 
 .inner-toggle.dark{
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   background-color: rgb(0, 0, 0);
   border: rgb(255, 255, 255) solid 2px;
   border-radius: 50%;
   margin-top: 5px;
   transition: .75s;
+}
+
+
+.message-game-container{
+  min-width: 90vh;
+  max-width: 100vh;
+  min-height: 100vh;
+}
+
+button.light{
+  background-color: white;
+  border: 2px black solid;
+  font-size: 17px;
+}
+
+button.light:hover{
+  background:rgb(0, 183, 255); ;
+  color: black;
+  transition: .5s;
 }

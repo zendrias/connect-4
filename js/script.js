@@ -13,6 +13,8 @@ const container = document.querySelector('.container')
 
 const winningAudio = document.querySelector('#winnerAudio')
 
+const clickSound = document.querySelector('#click-effect')
+
 const canvas = document.querySelector('canvas')
 
 // Declare Game Variables
@@ -110,6 +112,7 @@ function handleClick(e) {
     alert('Invalid Move! Please Try Agian!')
     return;
   }
+  clickSound.play();
   e.target.className = 'X'
   gameSlots[index] = playerTurn;
   index > 34 ? cells[index].className = 'X' : ''
@@ -151,14 +154,14 @@ function getWinner() {
 
 function changeMessage() {
   if (isWinner === null) {
-    if (playerTurn === 1) resultMessage.textContent = "Player Ones Move"
-    if (playerTurn === -1) resultMessage.textContent = "Player Twos Move"
+    if (playerTurn === 1) resultMessage.textContent = "Go Player One!"
+    if (playerTurn === -1) resultMessage.textContent = "Go Player Two!"
   } else if (isWinner === 'T') {
-    resultMessage.textContent = 'Tie Game! Select The "Reset Game" Button To Play Again'
+    resultMessage.textContent = 'Tie Game!'
   } else if (isWinner === 1) {
-    resultMessage.textContent = 'Winner! Winner! Player One!'
+    resultMessage.textContent = 'Winner! Player One!'
   } else if (isWinner === -1) {
-    resultMessage.textContent = 'Winner! Winner! Player Two!'
+    resultMessage.textContent = 'Winner! Player Two!'
   }
 }
 

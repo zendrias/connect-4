@@ -10,6 +10,7 @@
   <script defer src="./js/script.js"></script>
   <script src="./Confetti/index.min.js"></script>
   <audio id="winnerAudio" src="./winnerAudio/John Cena!.mp3"></audio>
+  <audio id="click-effect" src="./Audio/Ping sound effect.mp4"></audio>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
@@ -24,12 +25,13 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<header>
-  <h1 id="my-message" class="Light animate__animated animate__bounce">Connect 4</h1>
+<body class="light"></body>
+<div class="message-game-container">
+  <header>
+    <h1 id="my-message" class="Light animate__animated animate__bounce">Connect 4</h1>
 
-</header>
+  </header>
 
-<body class="light">
   <section class="container" id="light">
     <div id="0"></div>
     <div id="1"></div>
@@ -74,12 +76,13 @@
     <div id="40"></div>
     <div id="41"></div>
   </section>
-  <div class="button-container">
-    <button id="reset-button">Reset Here!</button>
-    <div class="outter-toggle light">
-      <div class="inner-toggle light"></div>
-    </div>
+</div>
+<div class="button-container">
+  <button id="reset-button" class="light">Reset Here!</button>
+  <div class="outter-toggle light">
+    <div class="inner-toggle light"></div>
   </div>
+</div>
 </body>
 
 </html>
