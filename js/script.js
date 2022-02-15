@@ -97,9 +97,9 @@ function render() {
   gameSlots.forEach(function (cell, i) {
     let cellColor;
     if (cell === 1) {
-      cellColor = 'red'
+      cellColor = 'rgba(255, 0, 0,.75)'
     } else if (cell === -1) {
-      cellColor = 'yellow'
+      cellColor = 'rgba(255, 255, 0, .75)'
     } else if (cell === null) {
       cellColor = 'rgba(0, 0, 255,0)';
     }
