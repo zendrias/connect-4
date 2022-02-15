@@ -24,11 +24,11 @@ text-align: center;
 
 #my-message{
   margin-top: 1rem;
-  font-family: 'Uncracked Free Trial','Space Mono', monospace;
+  font-family: 'Pacifico', cursive;
   grid-area: message;
   margin-bottom: 5px;
-  letter-spacing: 1rem;
-  font-size: 70px;
+  letter-spacing: .5rem;
+  font-size: 40px;
 }
 
 header{
