@@ -167,14 +167,14 @@ function colorMode() {
     container.id = 'light'
     container.style.background = 'blue'
   } else {
-    container.style.background = 'linear-gradient(blue, rgb(10, 255, 255), rgb(30, 255, 0))';
+    container.style.background = 'linear-gradient(purple, pink)';
     container.id = ''
   }
   if (resultMessage.classList.contains('Light')) {
-    resultMessage.style.color = 'black'
+    resultMessage.style.color = 'white'
     resultMessage.className = 'Dark'
   } else {
-    resultMessage.style.color = 'white'
+    resultMessage.style.color = 'black'
     resultMessage.className = 'Light'
   }
   if (body.classList.contains('light')) {
