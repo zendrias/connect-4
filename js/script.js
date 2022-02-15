@@ -17,6 +17,8 @@ const clickSound = document.querySelector('#click-effect')
 
 const canvas = document.querySelector('canvas')
 
+const innerToggle = document.querySelector('.inner-toggle')
+
 // Declare Game Variables
 let isWinner, playerTurn, gameSlots;
 
@@ -112,7 +114,6 @@ function handleClick(e) {
     alert('Invalid Move! Please Try Agian!')
     return;
   }
-  clickSound.play();
   e.target.className = 'X'
   gameSlots[index] = playerTurn;
   index > 34 ? cells[index].className = 'X' : ''
@@ -188,6 +189,8 @@ function colorMode() {
     outterToggle.classList.add('dark')
     innerToggle.classList.remove('light')
     innerToggle.classList.add('dark')
+    resetButton.classList.remove('light')
+    resetButton.classList.add('dark')
   } else {
     body.classList.add('light')
     body.classList.remove('dark')
@@ -195,5 +198,8 @@ function colorMode() {
     outterToggle.classList.remove('dark')
     innerToggle.classList.add('light')
     innerToggle.classList.remove('dark')
+    innerToggle.classList.add('light')
+    resetButton.classList.remove('dark')
   }
 }
+
