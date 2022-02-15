@@ -5,7 +5,7 @@ const resultMessage = document.querySelector('#my-message')
 
 const resetButton = document.querySelector('#reset-button')
 
-const modeButton = document.querySelector('#light-dark-mode')
+const outterToggle = document.querySelector('.outter-toggle')
 
 const body = document.querySelector('body')
 
@@ -25,7 +25,7 @@ cells.forEach(function (cell, i) {
 
 resetButton.addEventListener('click', intit)
 
-modeButton.addEventListener('click', colorMode);
+outterToggle.addEventListener('click', colorMode);
 // Constants
 const winningCombos = [
   [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10],
@@ -163,19 +163,12 @@ function changeMessage() {
 }
 
 function colorMode() {
-  if (body.style.backgroundColor !== 'white') {
-    body.style.backgroundColor = 'white'
-  } else {
-    body.style.backgroundColor = '#303030'
-  }
-  if (container.id !== 'blue') {
-    container.id = 'blue'
+  if (container.id !== 'light') {
+    container.id = 'light'
     container.style.background = 'blue'
-    modeButton.textContent = 'Dark Mode'
   } else {
     container.style.background = 'linear-gradient(blue, rgb(10, 255, 255), rgb(30, 255, 0))';
     container.id = ''
-    modeButton.textContent = 'Light Mode'
   }
   if (resultMessage.classList.contains('Light')) {
     resultMessage.style.color = 'black'
@@ -183,5 +176,20 @@ function colorMode() {
   } else {
     resultMessage.style.color = 'white'
     resultMessage.className = 'Light'
+  }
+  if (body.classList.contains('light')) {
+    body.classList.remove('light')
+    body.classList.add('dark')
+    outterToggle.classList.remove('light')
+    outterToggle.classList.add('dark')
+    innerToggle.classList.remove('light')
+    innerToggle.classList.add('dark')
+  } else {
+    body.classList.add('light')
+    body.classList.remove('dark')
+    outterToggle.classList.add('light')
+    outterToggle.classList.remove('dark')
+    innerToggle.classList.add('light')
+    innerToggle.classList.remove('dark')
   }
 }
