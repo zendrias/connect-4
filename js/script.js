@@ -57,7 +57,6 @@ const winningCombos = [
   [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
 ];
 
-
 var confettiSettings = { target: 'my-canvas' };
 
 var confetti = new ConfettiGenerator(confettiSettings);
