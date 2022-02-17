@@ -20,10 +20,10 @@ const canvas = document.querySelector('canvas')
 const innerToggle = document.querySelector('.inner-toggle')
 
 // Declare Game Variables
-let isWinner, playerTurn, gameSlots;
-let darkMode = false;
+let isWinner, playerTurn, gameSlots, darkMode;
+
 // Event Listeners
-cells.forEach(function (cell, i) {
+cells.forEach(function (cell) {
   cell.addEventListener('click', handleClick)
 })
 
@@ -57,16 +57,21 @@ const winningCombos = [
   [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
 ];
 
-var confettiSettings = { target: 'my-canvas' };
+// Game Constants
 
-var confetti = new ConfettiGenerator(confettiSettings);
+const confettiSettings = { target: 'my-canvas' };
 
-let four = [0, 1, 2, 3];
+const confetti = new ConfettiGenerator(confettiSettings);
 
-// Functions
+const four = [0, 1, 2, 3];
+
+// Calling Functions & Methods
 intit();
 confetti.render();
+
+// Functions
 function intit() {
+  let darkMode = false;
   resetButton.setAttribute('hidden', 'true')
   canvas.setAttribute('hidden', 'true')
   if (resultMessage.classList.contains('animate__rubberBand')) {
@@ -167,6 +172,7 @@ function changeMessage() {
   }
 }
 
+// This Controls Dark & Loght Mode Styling
 function colorMode() {
   if (body.classList.contains('light')) {
     body.classList.remove('light')

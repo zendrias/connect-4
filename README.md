@@ -1,35 +1,42 @@
-# Unit 1 Project
-### Zena Endrias
-
-Hello Everyone!
 # Connect 4
 
-### Rules
+## Rules
 
 Connect 4 is a competitive 2 player game.
 
 The primary goal in Connect 4 is to horizontally, vertically, or diagonally match up 4 of your game chips while simultaneously preventing your opponent from doing the same. Each player is only allowed to place one token per turn.
 
 I ultimately decided to take on Connect 4 for my Unit 1 Project because it was a childhood favorite. . . .Of course the similarity to Tic-Tac-Toe didnt hurt either.
-Screenshots
+
 
 ## Game Link
 
-https://tender-hermann-ba7286.netlify.app/
+[Click Here To Play!](https://tender-hermann-ba7286.netlify.app/)
+
+
+## ScreenShots
+
+ - ### Dark Mode
+ ![Dark Mode Game Screen](./gifs/darkModeScreenShot.png "Dark Mode Game Screen")
+
+- ### Winner Game Screen In Light Mode
+![Winner Game Screen](./gif/../gifs/lightModeScreenShot.png "Winner Game Screen")
 
 ## Technologies Used Include:
 
-### HTML
+1.  HTML
 
-### CSS
+2.  CSS
 
-### JavaScript
+3.  JavaScript
 
-### GitHub
+4.  GitHub
 
-### Google Fonts
+4.  Google Fonts
 
-### Simple CSS Animations
+5.  Netlify
+
+6.  Simple CSS Animations ( animate.css )
 
 ## Next Steps
 
