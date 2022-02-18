@@ -46,3 +46,5 @@ I ultimately decided to take on Connect 4 for my Unit 1 Project because it was a
 #1. Add a Pop-Up screen upon the page loading, greeting the users & collecting both users names. This is in an effort to personalize the win messages later on in the game.
 
 #2. Incorporate a score keeping mechanism to keep track of the users win tally across multiple games.
+
+#3 Add a computer player....

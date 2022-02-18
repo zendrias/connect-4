@@ -152,6 +152,7 @@ button.light:hover{
   color: black;
   font-size: 16px;
   transition: .5s ease-in-out;
+  font-weight: bold;
 }
 
 button.dark{
@@ -173,6 +174,7 @@ button.dark:hover{
   border: 5px rgb(0, 183, 255) solid;
   font-size: 16px;
   transition: .2s ease-in-out;
+  font-weight: bold;
 }
 
 
