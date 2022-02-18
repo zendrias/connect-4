@@ -16,8 +16,11 @@ I ultimately decided to take on Connect 4 for my Unit 1 Project because it was a
 
 ## ScreenShots
 
+- ## Wireframe
+![Wire-frame](./gifs/Wireframe/Connect%204%20Wire%20Frame.png "Dark Mode Game Screen")
+
  - ### Dark Mode
- ![Dark Mode Game Screen](./gifs/darkModeScreenShot.png "Dark Mode Game Screen")
+ ![Dark Mode Game Screen](./gifs/darkModeScreenShot.png "Dark Mode Game Screen") 
 
 - ### Winner Game Screen In Light Mode
 ![Winner Game Screen](./gif/../gifs/lightModeScreenShot.png "Winner Game Screen")
