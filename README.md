@@ -11,7 +11,7 @@ I ultimately decided to take on Connect 4 for my Unit 1 Project because it was a
 
 ## Game Link
 
-[Click Here To Play!](https://tender-hermann-ba7286.netlify.app/)
+[Connect 4](https://tender-hermann-ba7286.netlify.app/)
 
 
 ## ScreenShots
