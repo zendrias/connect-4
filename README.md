@@ -22,7 +22,7 @@ I ultimately decided to take on Connect 4 for my Unit 1 Project because it was a
 - ### Winner Game Screen In Light Mode
 ![Winner Game Screen](./gif/../gifs/lightModeScreenShot.png "Winner Game Screen")
 
-## Technologies Used Include:
+## Technologies Used:
 
 1.  HTML
 

@@ -1,9 +1,9 @@
 #1 // Create A Grid Of Individual Divs Using CSS Grid. Each Should Have A Unique Id.
  The Grid Will Be 7 x 6. I Will Not Fill The Entire Page With The Grid, So I Can Later
- Add DOM Messages For The User And A Reset Button. I Will Position Board Using Flexbox.
+ Add DOM Messages For The User And A Reset Button. I Will Position Board Using Flex-box.
 
-#2 // Create My Cached Element Refrences for My Message (document.querySelctor), My 
-Reset Button (document.querySelctor), & My Divs (document.querySelctorAll).
+#2 // Create My Cached Element References for My Message (document.querySelector), My 
+Reset Button (document.querySelector), & My Divs (document.querySelectorAll).
 
 #3 // Declare The Variables & Constants For The Game (winner, turn, gameSlots[an array],
  winningCombos)
@@ -13,16 +13,16 @@ Reset Button (document.querySelctor), & My Divs (document.querySelctorAll).
 
 #5 // Create A Function To Mark A Spot Once A Player Clicks On It.
 ** Make Sure To Prevent Any Clicks From Being Counted On Slots That Are Already Marked. In
-Addition, Make Sure Gravity Is Being Accouted For For All Player Selections. **
+Addition, Make Sure Gravity Is Being Accounted For For All Player Selections. **
 
-#6 // Create A Function That Will Control The DOM Message To The User (Whos Turn, Winner, 
+#6 // Create A Function That Will Control The DOM Message To The User (Who's Turn, Winner, 
 Loser, Tie-Game, Error Messages...)
 
 #7 // Create An Event Listener That Will Call A handleClick Function. This Function Will 
 Toggle The Turn, Show Reset Button On First Click & Call A Function To Check For A Game Winner,
  Or Tie.
 ** Make Sure To Prevent Any Clicks From Being Counted On Slots That Are Already Marked. In
-Addition, Make Sure Gravity Is Being Accouted For For All Player Selections. **
+Addition, Make Sure Gravity Is Being Accounted For For All Player Selections. **
 
 #8 // Create a Function To Check For A Winner or Tie Game. Implement DRY Code!!
 

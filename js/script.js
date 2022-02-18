@@ -1,4 +1,4 @@
-// Cached Element Refrences
+// Cached Element References
 const cells = document.querySelectorAll('.container > div')
 
 const resultMessage = document.querySelector('#my-message')
@@ -30,6 +30,7 @@ cells.forEach(function (cell) {
 resetButton.addEventListener('click', intit)
 
 outterToggle.addEventListener('click', colorMode);
+
 // Constants
 const winningCombos = [
   [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10],
@@ -71,7 +72,7 @@ confetti.render();
 
 // Functions
 function intit() {
-  let darkMode = false;
+  darkMode !== true ? darkMode = false : darkMode = true
   resetButton.setAttribute('hidden', 'true')
   canvas.setAttribute('hidden', 'true')
   if (resultMessage.classList.contains('animate__rubberBand')) {
@@ -172,7 +173,7 @@ function changeMessage() {
   }
 }
 
-// This Controls Dark & Loght Mode Styling
+// This Controls Dark & Light Mode Styling
 function colorMode() {
   if (body.classList.contains('light')) {
     body.classList.remove('light')

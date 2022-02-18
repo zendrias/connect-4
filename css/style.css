@@ -76,6 +76,7 @@ body.dark{
   padding-bottom: 5px;
   cursor: pointer;
   margin-left: 1rem;
+  transition: .5s ease-in-out;
 }
 
 .outter-toggle.dark{
@@ -91,11 +92,17 @@ body.dark{
   padding-bottom: 5px;
   cursor: pointer;
   margin-left: 1rem;
+  transition: .5s ease-in-out;
 }
 
 .outter-toggle.dark:hover{
   border:rgb(0, 183, 255) 2px solid;
-  transition: .75s;
+  transition: .75s ease-in-out;
+}
+
+.outter-toggle.light:hover{
+  border:rgb(0, 183, 255) 2px solid;
+  transition: .75s ease-in-out;
 }
 
 .inner-toggle.light{
@@ -105,7 +112,7 @@ body.dark{
   border: black solid 2px;
   border-radius: 50%;
   margin-top: 5px;
-  transition: .5s;
+  transition: .5s ease-in-out;
 }
 
 .inner-toggle.dark{
@@ -115,7 +122,7 @@ body.dark{
   border: rgb(255, 255, 255) solid 2px;
   border-radius: 50%;
   margin-top: 5px;
-  transition: .75s;
+  transition: .75s ease-in-out;
 }
 
 .message-game-container{
@@ -132,7 +139,7 @@ button.light{
   margin-left: 10px;
   background-color: rgb(0, 0, 0, 0);
   border: 2px rgb(0, 0, 0) solid;
-  transition: .5s;
+  transition: .5s ease-in-out;
   color: rgb(0, 0, 0);
   font-size: 14px;
   cursor: pointer;
@@ -144,7 +151,7 @@ button.light:hover{
   border: 5px rgb(0, 183, 255) solid;
   color: black;
   font-size: 16px;
-  transition: .5s;
+  transition: .5s ease-in-out;
 }
 
 button.dark{
@@ -155,7 +162,7 @@ button.dark{
   margin-left: 10px;
   background-color: rgba(0, 0, 0, 0);
   border: 2px white solid;
-  transition: .5s;
+  transition: .5s ease-in-out;
   color: white;
   font-size: 14px;
   cursor: pointer;
@@ -165,18 +172,18 @@ button.dark{
 button.dark:hover{
   border: 5px rgb(0, 183, 255) solid;
   font-size: 16px;
-  transition: .5s;
+  transition: .2s ease-in-out;
 }
 
 
 h1.light{
   color: rgb(0, 0, 0);
-  transition: .5s;
+  transition: .5s ease-in-out;
 }
 
 h1.dark{
   color: white;
-  transition: .5s;
+  transition: .5s ease-in-out;
 }
 
 
